@@ -15,27 +15,32 @@ var winningScore = 100;
 // add collectable items to the game
 function addItems() {
   items = game.add.physicsGroup();
-  createItem(675, 500, 'coin');
-  createItem(610, 300, 'coin');
-  createItem(575, 300, 'coin');
+  createItem(595, 500, 'coin');
+  createItem(590, 315, 'coin');
+  createItem(550, 315, 'coin');
   createItem(200, 500, 'coin');
   createItem(375, 360, 'coin');
   createItem(100, 500, 'coin');
-  createItem(90, 195, 'coin')
+  createItem(90, 200, 'coin');
   createItem(190, 130, 'coin');
+  createItem(330, 60, 'coin');
+  createItem(520, 108, 'coin');
+  createItem(645, 220, 'coin');
 }
 
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(550, 360, 'platform' );
+  platforms.create(450, 360, 'platform' );
   platforms.create(450, 550, 'platform');
   platforms.create(100, 550, 'platform');
   platforms.create(310, 410, 'platform');
   platforms.create(70, 250, 'platform');
   platforms.create(150, 180, 'platform');
   platforms.create(280, 110, 'platform');
-
+  platforms.create(500, 160, 'platform');
+  platforms.create(635, 270, 'platform');
+  
   platforms.setAll('body.immovable', true);
 }
 
