@@ -22,6 +22,7 @@ function addItems() {
   createItem(375, 360, 'coin');
   createItem(100, 500, 'coin');
   createItem(90, 195, 'coin')
+  createItem(190, 130, 'coin');
 }
 
 // add platforms to the game
@@ -32,7 +33,8 @@ function addPlatforms() {
   platforms.create(100, 550, 'platform');
   platforms.create(310, 410, 'platform');
   platforms.create(70, 250, 'platform');
-  platforms.create(140, 180, 'platform');
+  platforms.create(150, 180, 'platform');
+  platforms.create(280, 110, 'platform');
 
   platforms.setAll('body.immovable', true);
 }
