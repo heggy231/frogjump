@@ -19,14 +19,14 @@ function addItems() {
   createItem(590, 315, 'coin');
   createItem(550, 315, 'coin');
   createItem(200, 500, 'coin');
-  createItem(375, 360, 'coin');
+  createItem(375, 410, 'coin');
   createItem(100, 500, 'coin');
-  createItem(90, 270, 'coin');
-  createItem(190, 190, 'coin');
-  createItem(330, 100, 'coin');
-  createItem(520, 108, 'coin');
+  createItem(90, 380, 'coin');
+  createItem(190, 270, 'coin');
+  createItem(330, 180, 'coin');
+  createItem(555, 118, 'poison');
   createItem(645, 220, 'coin');
-  createItem(150, 13, 'coin');
+  createItem(120, 115, 'coin');
 }
 
 // add platforms to the game
@@ -35,13 +35,13 @@ function addPlatforms() {
   platforms.create(450, 360, 'platform2' );
   platforms.create(450, 550, 'platform');
   platforms.create(100, 550, 'platform');
-  platforms.create(310, 410, 'platform');
-  platforms.create(60, 350, 'platform2');
-  platforms.create(150, 240, 'platform');
-  platforms.create(260, 150, 'platform');
+  platforms.create(310, 460, 'platform');
+  platforms.create(30, 430, 'platform2');
+  platforms.create(150, 320, 'platform');
+  platforms.create(260, 220, 'platform');
   platforms.create(500, 160, 'platform2');
-  platforms.create(635, 270, 'platform');
-  platforms.create(70, 60, 'platform2');
+  platforms.create(635, 290, 'platform');
+  platforms.create(10, 170, 'platform2');
   
   platforms.setAll('body.immovable', true);
 }
@@ -92,6 +92,7 @@ window.onload = function () {
     game.load.spritesheet('player', 'chalkers.png', 48, 62);
     game.load.spritesheet('coin', 'coin.png', 36, 44);
     game.load.spritesheet('badge', 'badge.png', 42, 54);
+    game.load.spritesheet('poison', 'poison.png', 32,32);
   }
 
   // initial game set up
