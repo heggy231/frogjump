@@ -83,7 +83,7 @@ window.onload = function () {
     game.stage.backgroundColor = '#5db1ad';
     
     //Load images
-    game.load.image('platform', 'platform_1.png');
+    game.load.image('platform', 'platform_2.png');
     
     //Load spritesheets
     game.load.spritesheet('player', 'chalkers.png', 48, 62);
