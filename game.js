@@ -21,25 +21,27 @@ function addItems() {
   createItem(200, 500, 'coin');
   createItem(375, 360, 'coin');
   createItem(100, 500, 'coin');
-  createItem(90, 200, 'coin');
-  createItem(190, 130, 'coin');
-  createItem(330, 60, 'coin');
+  createItem(90, 270, 'coin');
+  createItem(190, 190, 'coin');
+  createItem(330, 100, 'coin');
   createItem(520, 108, 'coin');
   createItem(645, 220, 'coin');
+  createItem(150, 13, 'coin');
 }
 
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(450, 360, 'platform' );
+  platforms.create(450, 360, 'platform2' );
   platforms.create(450, 550, 'platform');
   platforms.create(100, 550, 'platform');
   platforms.create(310, 410, 'platform');
-  platforms.create(70, 250, 'platform');
-  platforms.create(150, 180, 'platform');
-  platforms.create(280, 110, 'platform');
-  platforms.create(500, 160, 'platform');
+  platforms.create(60, 350, 'platform2');
+  platforms.create(150, 240, 'platform');
+  platforms.create(260, 150, 'platform');
+  platforms.create(500, 160, 'platform2');
   platforms.create(635, 270, 'platform');
+  platforms.create(70, 60, 'platform2');
   
   platforms.setAll('body.immovable', true);
 }
@@ -83,7 +85,8 @@ window.onload = function () {
     game.stage.backgroundColor = '#5db1ad';
     
     //Load images
-    game.load.image('platform', 'platform_2.png');
+    game.load.image('platform', 'platform_1.png');
+    game.load.image('platform2', 'platform_2.png');
     
     //Load spritesheets
     game.load.spritesheet('player', 'chalkers.png', 48, 62);
