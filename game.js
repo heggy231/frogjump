@@ -26,7 +26,7 @@ function addItems() {
   createItem(330, 165, 'coin');
   createItem(555, 118, 'poison');
   createItem(645, 240, 'coin');
-  createItem(120, 115, 'coin');
+  createItem(120, 130, 'star');
   createItem(30, 300, 'poison');
   createItem(330, 520, 'poison');
 }
@@ -95,6 +95,7 @@ window.onload = function () {
     game.load.spritesheet('coin', 'coin.png', 36, 44);
     game.load.spritesheet('badge', 'badge.png', 42, 54);
     game.load.spritesheet('poison', 'poison.png', 32,32);
+    game.load.spritesheet('star', 'star.png', 32,32);
   }
 
   // initial game set up
