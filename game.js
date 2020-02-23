@@ -7,10 +7,14 @@ var items;
 var cursors;
 var jumpButton;
 var text;
+var livesText;
 var winningMessage;
+var loosingMessage;
 var won = false;
+var lost = false;
 var currentScore = 0;
 var winningScore = 100;
+var currentLives = 3;
 
 // add collectable items to the game
 function addItems() {
@@ -69,13 +73,17 @@ function itemHandler(player, item) {
   if (item.key === 'coin') {
     currentScore = currentScore + 10;
   } else if (item.key === 'poison') {
-    currentScore = currentScore - 10;
+    currentLives = currentLives - 1;
   } else {
     currentScore = currentScore + 20;
   }
 
   if (currentScore === winningScore) {
       createBadge();
+  }
+
+  if (currentLives === 0) {
+    lost = true;
   }
 }
 
@@ -120,13 +128,17 @@ window.onload = function () {
     cursors = game.input.keyboard.createCursorKeys();
     jumpButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
     text = game.add.text(16, 16, "SCORE: " + currentScore, { font: "bold 24px Arial", fill: "white" });
+    livesText = game.add.text(670, 16, "LIVES: " + currentLives, { font: "bold 24px Arial", fill: "white" });
     winningMessage = game.add.text(game.world.centerX, 275, "", { font: "bold 48px Arial", fill: "white" });
     winningMessage.anchor.setTo(0.5, 1);
+    loosingMessage = game.add.text(game.world.centerX, 275, "", { font: "bold 48px Arial", fill: "red" });
+    loosingMessage.anchor.setTo(0.5, 1);
   }
 
   // while the game is running
   function update() {
     text.text = "SCORE: " + currentScore;
+    livesText.text = "LIVES: " + currentLives;
     game.physics.arcade.collide(player, platforms);
     game.physics.arcade.overlap(player, items, itemHandler);
     game.physics.arcade.overlap(player, badges, badgeHandler);
@@ -152,9 +164,14 @@ window.onload = function () {
     if (jumpButton.isDown && (player.body.onFloor() || player.body.touching.down)) {
       player.body.velocity.y = -400;
     }
-    // when the player winw the game
+    // when the player wins the game
     if (won) {
       winningMessage.text = "YOU WIN!!!";
+    }
+
+    // when the player looses the game
+    if (lost) {
+      loosingMessage.text = "YOU LOST!!!";
     }
   }
 
