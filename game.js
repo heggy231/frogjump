@@ -71,7 +71,7 @@ function itemHandler(player, item) {
   } else if (item.key === 'poison') {
     currentScore = currentScore - 10;
   } else {
-    currentScore = currentScore + 10;
+    currentScore = currentScore + 20;
   }
 
   if (currentScore === winningScore) {
