@@ -23,9 +23,9 @@ function addItems() {
   createItem(100, 500, 'coin');
   createItem(90, 380, 'coin');
   createItem(190, 270, 'coin');
-  createItem(330, 180, 'coin');
+  createItem(330, 165, 'coin');
   createItem(555, 118, 'poison');
-  createItem(645, 220, 'coin');
+  createItem(645, 240, 'coin');
   createItem(120, 115, 'coin');
 }
 
